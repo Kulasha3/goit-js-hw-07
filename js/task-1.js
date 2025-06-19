@@ -3,7 +3,7 @@ console.log(`Number of categories: ${myElem.length}`);
 
 const mySubtitle = document.querySelectorAll(".item > h2");
 
-const result = mySubtitle.forEach((elem) => {
+mySubtitle.forEach((elem) => {
   console.log(`Category: ${elem.textContent}`);
   console.log(`Elements: ${elem.nextElementSibling.children.length}`);
 });

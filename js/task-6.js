@@ -1,4 +1,4 @@
-const userInput = document.querySelector("div#controls").children[0];
+const userInput = document.querySelector('#controls input[type="number"]');
 const container = document.querySelector("div#boxes");
 
 function createBoxes(amount) {
