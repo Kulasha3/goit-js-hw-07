@@ -71,7 +71,7 @@ body {
   justify-content: center;
 }
 
-.gallery-item {
+.gallery-item img {
   width: 360px;
   height: 300px;
   object-fit: cover;

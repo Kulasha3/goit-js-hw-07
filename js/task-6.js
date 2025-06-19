@@ -17,13 +17,15 @@ const destroyBtn = document.querySelector("[data-destroy]");
 
 createBtn.addEventListener("click", onCreateClick);
 function onCreateClick() {
-  container.innerHTML = "";
-  const amount = parseInt(userInput.value, 10);
-  if (amount >= 1 && amount <= 100) {
-    createBoxes(amount);
-  } else {
-    userInput.setAttribute("placeholder", "min 1, max 100");
+  const amount = Number(userInput.value);
+  
+  if (isNaN(amount) || amount < 1 || amount > 100) {
+    alert("Please enter a number between 1 and 100");
+    return;
   }
+  
+  container.innerHTML = "";
+  createBoxes(amount);
   userInput.value = "";
 }
 
